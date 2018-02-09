@@ -12,25 +12,25 @@ mergerfs -o&lt;options&gt; &lt;srcmounts&gt; &lt;mountpoint&gt;
 
 # DESCRIPTION
 
-**mergerfs** is a union filesystem geared towards simplifying storage and management of files across numerous commodity storage devices. It is similar to **mhddfs**, **unionfs**, and **aufs**.
+**Mergerfs** is a union file system designed to simplify storage and file management through innumerable, widely available, storage devices. It is similar to **mhddfs**, **unionfs**, and **aufs**.
 
 # FEATURES
 
-* Runs in userspace (FUSE)
-* Configurable behaviors
-* Support for extended attributes (xattrs)
-* Support for file attributes (chattr)
+* Run in userspace (FUSE)
+* Configurable behavior
+* Supports extended attributes (xattrs)
+* Supports file attributes (chattr)
 * Runtime configurable (via xattrs)
-* Safe to run as root
-* Opportunistic credential caching
-* Works with heterogeneous filesystem types
-* Handling of writes to full drives (transparently move file to drive with capacity)
-* Handles pool of readonly and read/write drives
-* Turn read-only files into symlinks to increase read performance
+* Safely run as root
+* Opportunistic Credentials Caching
+* Suitable for heterogeneous file system types
+* Negotiate write to full drive (transparently move the file to a drive with enough capacity)
+* Handling pf read-only and read / write drive pools
+* Convert read-only files to symbolic links to improve read performance
 
 # How it works
 
-mergerfs logically merges multiple paths together. Think a union of sets. The file/s or directory/s acted on or presented through mergerfs are based on the policy chosen for that particular action. Read more about policies below.
+Mergerfs logically fuses several paths together. Consider the joining of sets. The files or folders presented or represented by mergerfs are based on the policies selected for this particular operation. Learn more about the policies below.
 
 ```
 A         +      B        =       C
